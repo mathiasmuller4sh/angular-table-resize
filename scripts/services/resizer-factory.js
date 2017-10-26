@@ -60,6 +60,9 @@ angular.module("ngTableResize").factory("ResizerModel", [function() {
     ResizerModel.prototype.saveAttr = function (column) {
         return $(column).outerWidth();
     };
+    ResizerModel.prototype.applyWidth = function (width, column) {
+        return $(column).width(width);
+    };
 
     return ResizerModel;
 }]);
